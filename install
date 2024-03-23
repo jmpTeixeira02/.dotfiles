@@ -1,2 +1,2 @@
-stow -D .
-stow .
+stow --adpot .
+git reset --hard
