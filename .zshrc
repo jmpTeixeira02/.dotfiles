@@ -18,7 +18,7 @@ alias vi="nvim"
 alias src="source ~/.zshrc"
 
 # Needed for TMUX Theme
-export TMUX_KANAGAWA_THEME="$HOME/.config/tmux/plugins/tmux-kanagawa"
+export TMUX_KANAGAWA_THEME="$HOME/.dotfiles/.config/tmux/plugins/tmux-kanagawa"
 chmod u+x ${TMUX_KANAGAWA_THEME}/kanagawa.tmux
 chmod u+x ${TMUX_KANAGAWA_THEME}/**/*.sh
 
