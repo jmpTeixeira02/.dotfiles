@@ -11,6 +11,7 @@ ZSH_TMUX_AUTOSTART=true
 # Variables
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
+export STARSHIP_CONFIG=~/.dotfiles/.config/starship/starship.toml
 
 # Alias
 alias vim="nvim"
