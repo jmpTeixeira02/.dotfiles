@@ -4,19 +4,22 @@
 # Inserts a blank line between shell prompts
 add_newline = false 
 
+
 format = """
+[ ](#6a9589)\
 $directory\
-[](fg:bright-green bg:green)\
+[](bg:green fg:#6a9589)\
 $git_branch\
 $git_status\
-[](bg:background fg:green)\
+[](bg:#2a2a37 fg:green)\
 $time\
+[ ](fg:#2a2a37)\
 """
 
 [directory]
-style="bg:bright-green fg:black"
+style="bg:#6a9589 fg:black"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 2 
 truncation_symbol = "…/"
 
 [git_branch]
@@ -31,7 +34,7 @@ format = '[$all_status$ahead_behind ]($style)'
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:background fg:white"
+style = "bg:#2a2a37 fg:white"
 format = '[  $time ]($style)'
 
 # Disable the package module, hiding it from the prompt completely
