@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.last_buffer = 0
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<C-s>", function()
     local save_cursor = vim.api.nvim_win_get_cursor(0)
     vim.cmd('execute "normal gg=G"')
