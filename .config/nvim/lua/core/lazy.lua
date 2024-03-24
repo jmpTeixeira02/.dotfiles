@@ -13,7 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     {
         'nvim-telescope/telescope.nvim', version = '0.1.5',
-        dependencies = { {'nvim-lua/plenary.nvim'} }
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            "BurntSushi/ripgrep"
+        }
     },
     {
         "windwp/nvim-autopairs",
@@ -21,6 +24,8 @@ local plugins = {
         config = true
     },
     "tpope/vim-commentary",
+    "tpope/vim-surround",
+    "tpope/vim-fugitive",
     "rebelot/kanagawa.nvim",
     {
         'nvim-lualine/lualine.nvim',
@@ -38,6 +43,7 @@ local plugins = {
     'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
     'theprimeagen/harpoon',
     'mbbill/undotree',
+    'lewis6991/gitsigns.nvim',
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
