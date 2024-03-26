@@ -12,3 +12,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("core.plugins", {})
+-- Oil is doodoo, so keymap cant be defined on plugin            
+vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>")
