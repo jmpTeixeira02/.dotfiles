@@ -3,6 +3,13 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
     config = function()
-        require("oil").setup()
-    end, 
+        require("oil").setup({
+            keymaps = {
+                ["<C-s>"] = "false",
+                ["<C-t>"] = "false",
+                ["<C-h>"] = "false",
+                ["<C-c>"] = "false",
+            }
+        })
+    end,
 }
