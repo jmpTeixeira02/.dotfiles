@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.g.last_buffer = 0
 
-vim.keymap.set("n", "<C-s>", vim.cmd.w)
 vim.keymap.set("n", "<leader><CR>", vim.cmd.so)
 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
