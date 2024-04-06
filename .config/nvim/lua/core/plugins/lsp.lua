@@ -69,7 +69,7 @@ return {
                 vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
                 vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
                 vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-                vim.keymap.set('n', '<leader>vcr', '<cmlua vim.lsp.buf.rename()<cr>', opts)
+                vim.keymap.set('n', '<leader>vr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
                 vim.keymap.set({ 'n', 'v' }, '<leader>vca', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
             end)
 

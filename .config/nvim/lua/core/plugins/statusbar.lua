@@ -24,7 +24,7 @@ return {
             lualine_a = { 'mode' },
             lualine_b = { 'branch', 'diff', { 'diagnostics', symbols = { error = '', warn = '', info = '', hint = '' }, } },
             lualine_c = { 'filename' },
-            lualine_x = { 'encoding', 'filetype' },
+            lualine_x = { 'encoding', { 'filetype', icons_enabled = false } },
             lualine_y = { 'progress' },
             lualine_z = { 'location' }
         },
