@@ -3,17 +3,23 @@ return {
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-        local harpoon = require("harpoon")
         require("harpoon"):setup()
-        vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
-        vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
     end,
+    keys = {
+        { "<leader>A", function() require("harpoon"):list():add() end },
+        {
+            "<leader>a",
+            function()
+                local harpoon = require("harpoon")
+                harpoon.ui:toggle_quick_menu(harpoon:list())
+            end,
+        },
+        { "<leader>i", function() require("harpoon"):list():prev() end },
+        { "<leader>o", function() require("harpoon"):list():next() end },
+        { "<leader>1", function() require("harpoon"):list():select(1) end },
+        { "<leader>2", function() require("harpoon"):list():select(2) end },
+        { "<leader>3", function() require("harpoon"):list():select(3) end },
+        { "<leader>4", function() require("harpoon"):list():select(4) end },
+        { "<leader>5", function() require("harpoon"):list():select(5) end },
+    }
 }
-
-
-
---vim.keymap.set("n", "<C-1>", function() ui.nav_file(1) endo
---vim.keymap.set("n", "<C-2>", function() ui.nav_file(2) end)
---vim.keymap.set("n", "<C-3>", function() ui.nav_file(3) end)
---vim.keymap.set("n", "<C-4>", function() ui.nav_file(4) end)
---vim.keymap.set("n", "<C-5>", function() ui.nav_file(5) end)
