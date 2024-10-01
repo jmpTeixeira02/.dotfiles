@@ -23,8 +23,8 @@ return {
         sections = {
             lualine_a = { 'mode' },
             lualine_b = { 'branch', 'diff', { 'diagnostics', symbols = { error = '', warn = '', info = '', hint = '' }, } },
-            lualine_c = { 'filename' },
-            lualine_x = { 'encoding', { 'filetype' } },
+            lualine_c = { { 'filename', path = 4 } },
+            lualine_x = { 'encoding', 'filetype' },
             lualine_y = { 'progress' },
             lualine_z = { 'location' }
         },
