@@ -29,4 +29,6 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
 --vim.opt.colorcolumn = "80"
