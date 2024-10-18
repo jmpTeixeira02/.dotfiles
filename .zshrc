@@ -14,7 +14,10 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG=~/.dotfiles/.config/starship/starship.toml
+
+
 ## FZF
+export FZF_DEFAULT_OPTS="--preview '[[ \$(file --mime {}) =~ binary ]] || batcat --style=numbers --color=always {} || echo {} is a binary file' --preview-window=right:60%"
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND='fd'
 export FZF_ALT_C_COMMAND='fd --type d --hidden'
