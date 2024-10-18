@@ -6,6 +6,13 @@ return {
                 vim.lsp.buf.format()
                 vim.cmd.w()
             end, {})
+            local null_ls = require("null-ls")
+
+            null_ls.setup({
+                sources = {
+                    null_ls.builtins.diagnostics.golangci_lint,
+                },
+            })
         end
     },
     {
