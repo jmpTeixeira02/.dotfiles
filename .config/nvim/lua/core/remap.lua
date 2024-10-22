@@ -24,4 +24,4 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Go Error Handling
-vim.keymap.set("n", "<leader>ni", "iif err != nil {}<ESC>")
+vim.keymap.set("n", "<leader>ni", "$a<CR>if err != nil {}<ESC>")
