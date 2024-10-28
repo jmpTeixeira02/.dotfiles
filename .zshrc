@@ -26,6 +26,7 @@ export FZF_ALT_C_COMMAND='fd --type d --hidden'
 alias vim="nvim"
 alias vi="nvim"
 alias src="source ~/.zshrc"
+alias tree="eza --tree"
 
 # Needed for TMUX Theme
 export TMUX_KANAGAWA_THEME="$HOME/.dotfiles/.config/tmux/plugins/tmux-kanagawa"
