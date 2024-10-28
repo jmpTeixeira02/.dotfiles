@@ -4,7 +4,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' frequency 13
 
 # Plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete tmux fzf)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete eza tmux fzf )
 ZSH_TMUX_DEFAULT_SESSION_NAME="master"
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
@@ -32,6 +32,7 @@ export TMUX_KANAGAWA_THEME="$HOME/.dotfiles/.config/tmux/plugins/tmux-kanagawa"
 chmod u+x ${TMUX_KANAGAWA_THEME}/kanagawa.tmux
 chmod u+x ${TMUX_KANAGAWA_THEME}/**/*.sh
 
+export PATH=$PATH:$(go env GOPATH)/bin/
 
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
