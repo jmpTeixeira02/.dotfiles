@@ -27,6 +27,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias src="source ~/.zshrc"
 alias tree="eza --tree"
+alias cat='batcat --paging=never'
 
 # Needed for TMUX Theme
 export TMUX_KANAGAWA_THEME="$HOME/.dotfiles/.config/tmux/plugins/tmux-kanagawa"
