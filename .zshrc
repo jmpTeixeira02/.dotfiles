@@ -34,6 +34,7 @@ export TMUX_KANAGAWA_THEME="$HOME/.dotfiles/.config/tmux/plugins/tmux-kanagawa"
 chmod u+x ${TMUX_KANAGAWA_THEME}/kanagawa.tmux
 chmod u+x ${TMUX_KANAGAWA_THEME}/**/*.sh
 
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin/
 
 source $ZSH/oh-my-zsh.sh
