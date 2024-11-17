@@ -7,4 +7,9 @@ return {
       colorscheme = "kanagawa-dragon",
     },
   },
+
+  {
+    "stevearc/dressing.nvim",
+    event = "VeryLazy"
+  },
 }
