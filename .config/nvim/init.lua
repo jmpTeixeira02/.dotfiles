@@ -1,3 +1,2 @@
-require("core.set")
-require("core.remap")
-require("core.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

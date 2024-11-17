@@ -1,0 +1,29 @@
+return {
+  "nvim-telescope/telescope.nvim",
+  keys = {
+    {
+      "<leader>fa",
+      function()
+        require("telescope.builtin").find_files()
+      end,
+    },
+    {
+      "<leader>ff",
+      function()
+        require("telescope.builtin").git_files()
+      end,
+    },
+    {
+      "<leader>ft",
+      function()
+        require("telescope.builtin").treesitter()
+      end,
+    },
+    {
+      "<leader>fs",
+      function()
+        require("telescope.builtin").live_grep()
+      end,
+    },
+  },
+}
