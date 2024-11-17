@@ -1,5 +1,14 @@
 return {
-  { "rebelot/kanagawa.nvim" },
+  {
+    "rebelot/kanagawa.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
 
   {
     "LazyVim/LazyVim",
@@ -10,6 +19,6 @@ return {
 
   {
     "stevearc/dressing.nvim",
-    event = "VeryLazy"
+    event = "VeryLazy",
   },
 }

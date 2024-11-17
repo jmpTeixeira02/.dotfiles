@@ -7,6 +7,6 @@ return {
     },
   },
   keys = {
-    { "<leader>u", "<cmd>Telescope undo<cr>" },
+    { "<leader>uu", "<cmd>Telescope undo<cr>" },
   },
 }
