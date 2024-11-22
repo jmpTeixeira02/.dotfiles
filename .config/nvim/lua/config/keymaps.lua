@@ -24,3 +24,5 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- OIL (File Explorer)
 vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>")
+
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
