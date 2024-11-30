@@ -26,7 +26,7 @@ return {
             alternate_file = "",
             directory = "",
           },
-          mode = 2,
+          mode = 0,
         },
       },
       lualine_c = {
