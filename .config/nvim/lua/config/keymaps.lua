@@ -20,9 +20,3 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 --- PLUGINS ---
---
-
--- OIL (File Explorer)
-vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>")
-
-vim.keymap.set("n", "gl", vim.diagnostic.open_float)
