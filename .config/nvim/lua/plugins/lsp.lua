@@ -6,6 +6,14 @@ return {
     { "williamboman/mason-lspconfig.nvim", config = function() end },
   },
   opts = function()
+    local keys = require("lazyvim.plugins.lsp.keymaps").get()
+    keys[#keys + 1] = {
+      "<leader>ca",
+      function()
+        require("tiny-code-action").code_action()
+      end,
+      desc = "Open Code Action Preview",
+    }
     ---@class PluginLspOpts
     local ret = {
       -- options for vim.diagnostic.config()
