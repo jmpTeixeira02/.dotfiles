@@ -1,6 +1,9 @@
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+    "bwpge/lualine-pretty-path",
+  },
   opts = {
     options = {
       component_separators = "",
@@ -16,23 +19,19 @@ return {
         { "branch" },
         { "diff", symbols = { added = " ", modified = " ", removed = " " } },
         { "diagnostics", symbols = { error = " ", warn = " ", info = " ", hint = "" } },
-        {
-          "buffers",
-          buffers_color = {
-            active = "lualine_a_normal",
-            inactive = "lualine_b_normal",
-          },
-          symbols = {
-            modified = " ●",
-            alternate_file = "",
-            directory = "",
-          },
-          mode = 2,
-        },
       },
       lualine_c = {
-        { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-        { LazyVim.lualine.pretty_path() },
+        {
+          "pretty_path",
+          directories = {
+            max_depth = 4,
+          },
+          highlights = {
+            newfile = "LazyProgressDone",
+          },
+          separator = "",
+        },
+        { "navic", color_correction = "dynamic" },
       },
       lualine_x = {
           -- stylua: ignore
