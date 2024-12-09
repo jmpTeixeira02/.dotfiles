@@ -26,14 +26,12 @@
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/nvim";
   };
 
-  # programs = {
-  #   home-manager.enable = true;
-  #   git = {
-  #     enable = true;
-  #     config = {
-  #       email = "joaompt2002@hotmail.com";
-  #       name = "joao";
-  #     };
-  #   };
-  # };
+  programs = {
+    home-manager.enable = true;
+    git = {
+      enable = true;
+      userEmail = "joaompt2002@hotmail.com";
+      userName = "Joao Teixeira";
+    };
+  };
 }
