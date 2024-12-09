@@ -10,17 +10,20 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs =
+    { nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       homeConfigurations = {
         joao = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ 
-            ./home.nix 
+          modules = [
+            ./home.nix
             ./module/zsh.nix
+            ./module/tmux.nix
           ];
         };
       };
