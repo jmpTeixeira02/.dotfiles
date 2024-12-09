@@ -6,8 +6,8 @@ vim.g.last_buffer = 0
 local wk = require("which-key")
 wk.add({
   { "<leader><CR>", vim.cmd.so, desc = "Reload Vim Config" },
-  { "<leader>y", '"+y"', desc = "Yank to clipboard" },
-  { "<leader>Y", '"+Y"', desc = "Yank to end to clipboard" },
+  { "<leader>y", '"+y"', desc = "Yank to clipboard", mode = { "v", "n" } },
+  { "<leader>Y", '"+Y"', desc = "Yank to end to clipboard", mode = { "v", "n" } },
 })
 
 -- Recenter buffer
