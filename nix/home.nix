@@ -19,6 +19,7 @@
     nodejs_20
     eza
     zoxide
+    neovim
   ];
 
   home.file = {
