@@ -18,8 +18,8 @@
     unzip
     nodejs_20
     eza
-    zoxide
     neovim
+    zoxide
   ];
 
   home.file = {

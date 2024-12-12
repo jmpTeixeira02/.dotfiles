@@ -55,3 +55,4 @@ export FZF_ALT_C_COMMAND='fd --type d --hidden'
 
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
