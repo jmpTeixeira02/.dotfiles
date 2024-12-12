@@ -12,30 +12,46 @@ ZSH_TMUX_UNICODE=true
 # Variables
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin/
 export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
-
-## FZF
-export FZF_DEFAULT_OPTS="--preview '[[ \$(file --mime {}) =~ binary ]] || batcat --style=numbers --color=always {} || echo {} is a binary file' --preview-window=right:60%"
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_CTRL_T_COMMAND='fd'
-export FZF_ALT_C_COMMAND='fd --type d --hidden'
 
 # Alias
 alias vim="nvim"
 alias vi="nvim"
 alias src="source ~/.zshrc"
-alias tree="eza --tree"
-alias cat='batcat --paging=never'
+alias tree="eza --icons --tree"
+alias cat='bat --paging=never'
+alias lg='lazygit'
 
-# Needed for TMUX Theme
-export TMUX_KANAGAWA_THEME="$HOME/.dotfiles/.config/tmux/plugins/tmux-kanagawa"
-chmod u+x ${TMUX_KANAGAWA_THEME}/kanagawa.tmux
-chmod u+x ${TMUX_KANAGAWA_THEME}/**/*.sh
+## FZF
+export FZF_DEFAULT_OPTS="
+  --tmux=center,90%,90%
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'
+  --preview-window=right:60%
+  --walker-skip=.git*,node_modules
+"
 
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$(go env GOPATH)/bin/
+# Preview file in file preview
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+"
+
+# CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+
+# Print tree structure in the preview window
+export FZF_ALT_C_OPTS="
+  --preview 'eza --icons --tree --color=always {}'
+"
+
+export FZF_DEFAULT_COMMAND='fd '
+export FZF_CTRL_T_COMMAND='fd --type f'
+export FZF_ALT_C_COMMAND='fd --type d --hidden'
 
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
