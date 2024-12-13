@@ -30,7 +30,7 @@ export FZF_DEFAULT_OPTS="
   --tmux=center,90%,90%
   --bind 'ctrl-/:change-preview-window(down|hidden|)'
   --preview-window=right:60%
-  --walker-skip=.git*,node_modules
+  --walker-skip=.git,node_modules
 "
 
 # Preview file in file preview

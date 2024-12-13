@@ -18,6 +18,7 @@
     unzip
     eza
     zoxide
+    tlrc
   ];
 
   programs.home-manager.enable = true;
