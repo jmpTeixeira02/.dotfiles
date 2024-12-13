@@ -10,32 +10,13 @@
     gnumake
     bison
     libgcc
-    go
-    lazygit
     fd
     fzf
     bat
     unzip
-    nodejs_20
     eza
-    neovim
     zoxide
   ];
 
-  home.file = {
-    ".config/nvim".source =
-      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/nvim";
-  };
-
-  programs = {
-    home-manager.enable = true;
-    git = {
-      enable = true;
-      userEmail = "joaompt2002@hotmail.com";
-      userName = "Joao Teixeira";
-      extraConfig = {
-        pull.rebase = "false";
-      };
-    };
-  };
+  programs.home-manager.enable = true;
 }
