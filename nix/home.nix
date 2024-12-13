@@ -11,6 +11,8 @@
     bison
     libgcc
     fd
+    ripgrep
+    btop
     fzf
     bat
     unzip
