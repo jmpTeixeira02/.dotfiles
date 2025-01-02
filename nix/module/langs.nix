@@ -7,7 +7,7 @@
     typescript
     python314
     python312Packages.pip
-    elixir_1_16
+    elixir
   ];
 
   programs.home-manager.enable = true;

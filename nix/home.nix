@@ -4,7 +4,7 @@
   home.username = "joao";
   home.homeDirectory = "/home/joao";
 
-  home.stateVersion = "24.11"; # Please read the comment before changing.
+  home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
     gnumake
@@ -19,6 +19,7 @@
     eza
     zoxide
     tlrc
+    ghostty
   ];
 
   programs.home-manager.enable = true;
