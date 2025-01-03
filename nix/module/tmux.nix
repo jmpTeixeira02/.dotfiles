@@ -51,6 +51,7 @@ in
       tmux-fzf
       sensible
       continuum
+      resurrect
     ];
 
     extraConfig = ''

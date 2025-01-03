@@ -19,7 +19,6 @@
     eza
     zoxide
     tlrc
-    ghostty
   ];
 
   programs.home-manager.enable = true;
