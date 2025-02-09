@@ -21,13 +21,7 @@
         joao = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
-            ./home.nix
-            ./module/git.nix
-            ./module/zsh.nix
-            ./module/nvim.nix
-            ./module/tmux.nix
-            ./module/langs.nix
-            ./module/terminal.nix
+            ./share.nix
           ];
         };
       };
