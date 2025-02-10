@@ -1,3 +1,4 @@
-nix run home-manager -- switch --flake ./nix/#joao
-sudo chsh -s $(which zsh)
-sudo usermod -s $(which zsh) $USER
+export FLAKE_USER=$(whoami)
+export FLAKE_HOME=$(echo $HOME)
+export NIXPKGS_ALLOW_BROKEN=1
+nix run home-manager -- switch --flake ./nix/#sap --impure

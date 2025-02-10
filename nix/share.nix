@@ -1,20 +1,16 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "joao";
-  home.homeDirectory = "/home/joao";
-
+  home.username = builtins.getEnv "FLAKE_USER";
+  home.homeDirectory = builtins.getEnv "FLAKE_HOME";
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
-    # Core
     clang-tools
     clang
-    libgcc
     gnumake
     bison
 
-    # Terminal QOL
     zoxide
     eza
     bat

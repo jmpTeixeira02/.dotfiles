@@ -2,9 +2,9 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
+  /* home.packages = with pkgs; [
     ghostty
-  ];
+  ]; */
 
   home.file = {
     ".config/ghostty".source =
