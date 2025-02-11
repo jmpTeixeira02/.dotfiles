@@ -22,7 +22,6 @@ in
   programs.tmux = {
     enable = true;
     terminal = "tmux-256color";
-    shell = "${pkgs.zsh}/bin/zsh";
     baseIndex = 1;
     keyMode = "vi";
     mouse = true;
@@ -68,7 +67,7 @@ in
       set -g @resurrect-capture-pane-contents 'on' # allow tmux-ressurect to capture pane contents
       set -g @continuum-restore 'on' # enable tmux-continuum functionality
 
-      # run -b '~/.tmux/plugins/tpm/tpm'
+      set -g default-command "$SHELL"
     '';
   };
 

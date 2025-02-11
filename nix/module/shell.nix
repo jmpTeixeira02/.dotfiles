@@ -8,6 +8,7 @@
     zsh-completions
     zsh-autocomplete
     zsh-syntax-highlighting
+    zsh-fzf-tab
     starship
   ];
 

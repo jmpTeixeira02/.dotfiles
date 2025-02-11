@@ -33,6 +33,7 @@
     ./module/nvim.nix
     ./module/tmux.nix
     ./module/langs.nix
+    ./module/docker.nix
     ./module/terminal.nix
   ];
 
