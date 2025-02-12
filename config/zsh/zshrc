@@ -1,7 +1,6 @@
 ZSH_TMUX_DEFAULT_SESSION_NAME="master"
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
-zstyle ':omz:update' frequency 7
 setopt HIST_SAVE_NO_DUPS
 setopt interactivecomments
 
@@ -56,6 +55,7 @@ antigen use oh-my-zsh
 antigen bundle eza
 antigen bundle command-not-found
 antigen bundle git
+antigen bundle tmux
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
