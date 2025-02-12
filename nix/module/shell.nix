@@ -4,11 +4,8 @@
   home.packages = with pkgs; [
     zsh
     oh-my-zsh
-    zsh-autosuggestions
-    zsh-completions
-    zsh-autocomplete
-    zsh-syntax-highlighting
-    zsh-fzf-tab
+    zinit
+    antigen
     starship
   ];
 

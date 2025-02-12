@@ -2,6 +2,8 @@ ZSH_TMUX_DEFAULT_SESSION_NAME="master"
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
 zstyle ':omz:update' frequency 7
+setopt HIST_SAVE_NO_DUPS
+setopt interactivecomments
 
 # Variables
 export PATH="$PATH:/opt/nvim-linux64/bin"
@@ -27,7 +29,6 @@ export FZF_DEFAULT_OPTS="
   --walker-skip=.git,node_modules
 "
 
-setopt HIST_SAVE_NO_DUPS
 
 # Preview file in file preview
 export FZF_CTRL_T_OPTS="
@@ -45,15 +46,21 @@ export FZF_ALT_C_OPTS="
   --preview 'eza --icons --tree --color=always {}'
 "
 
+
 export FZF_DEFAULT_COMMAND='fd '
 export FZF_CTRL_T_COMMAND='fd --type f'
 export FZF_ALT_C_COMMAND='fd --type d --hidden'
 
-
-source ~/.nix-profile/share/oh-my-zsh/oh-my-zsh.sh
-source ~/.nix-profile/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source ~/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.nix-profile/share/antigen/antigen.zsh
+antigen use oh-my-zsh
+antigen bundle eza
+antigen bundle command-not-found
+antigen bundle git
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle marlonrichert/zsh-autocomplete@main
+antigen apply
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
