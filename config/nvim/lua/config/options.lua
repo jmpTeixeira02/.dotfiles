@@ -35,3 +35,4 @@ vim.opt.laststatus = 3
 vim.opt.cmdheight = 1
 
 vim.opt.cursorline = false
+vim.g.snacks_animate = false
