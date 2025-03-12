@@ -3,8 +3,6 @@
 {
   home.packages = with pkgs; [
     zsh
-    oh-my-zsh
-    zinit
     antigen
     starship
   ];

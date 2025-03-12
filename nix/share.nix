@@ -35,6 +35,7 @@
     ./module/langs.nix
     ./module/docker.nix
     ./module/terminal.nix
+    ./module/cmk.nix
   ];
 
   programs.home-manager.enable = true;

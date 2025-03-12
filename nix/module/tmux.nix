@@ -13,7 +13,7 @@ let
       owner = "Nybkox";
       repo = "tmux-kanagawa";
       rev = "master";
-      sha256 = "sha256-9S4HQHuECGLPLdPishmwEO0twdeQ6mZQfIMNFFDkgQ8=";
+      sha256 = "sFL9/PMdPJxN7tgpc4YbUHW4PkCXlKmY7a7gi7PLcn8=";
     };
   };
 in
