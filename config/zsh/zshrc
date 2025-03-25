@@ -9,6 +9,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$(go env GOPATH)/bin/
+export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
@@ -65,3 +66,4 @@ antigen apply
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 source <(fzf --zsh)
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

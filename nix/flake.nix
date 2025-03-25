@@ -24,6 +24,7 @@
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
           modules = [
             ./share.nix
+            ./module/mac.nix
           ];
         };
       };
