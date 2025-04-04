@@ -31,11 +31,9 @@
   imports = [
     ./module/shell.nix
     ./module/nvim.nix
-    ./module/tmux.nix
     ./module/langs.nix
     ./module/docker.nix
     ./module/terminal.nix
-    ./module/cmk.nix
   ];
 
   programs.home-manager.enable = true;

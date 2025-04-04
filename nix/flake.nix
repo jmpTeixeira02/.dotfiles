@@ -18,13 +18,21 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;    
           modules = [
             ./share.nix
+            ./module/tmux.nix
           ];
         };
-        sap = home-manager.lib.homeManagerConfiguration {
+        server = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;    
+          modules = [
+            ./share.nix
+          ];
+        };
+        work = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
           modules = [
             ./share.nix
             ./module/mac.nix
+            ./module/tmux.nix
           ];
         };
       };
