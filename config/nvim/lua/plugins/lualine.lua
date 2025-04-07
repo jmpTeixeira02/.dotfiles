@@ -34,36 +34,34 @@ return {
         { "navic", color_correction = "dynamic" },
       },
       lualine_x = {
-          -- stylua: ignore
-          {
-            function() return "  " .. require("dap").status() end,
-            cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
-            color = function() return { fg = Snacks.util.color("Debug") } end,
-          },
-          -- stylua: ignore
-          {
-            require("lazy.status").updates,
-            cond = require("lazy.status").has_updates,
-            color = function() return { fg = Snacks.util.color("Special") } end,
-          },
+        -- stylua: ignore
+        {
+          function() return require("noice").api.status.command.get() end,
+          cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
+          color = function() return { fg = Snacks.util.color("Statement") } end,
+        },
+        -- stylua: ignore
+        {
+          function() return require("noice").api.status.mode.get() end,
+          cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
+          color = function() return { fg = Snacks.util.color("Constant") } end,
+        },
+        -- stylua: ignore
+        {
+          function() return "  " .. require("dap").status() end,
+          cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
+          color = function() return { fg = Snacks.util.color("Debug") } end,
+        },
+        -- stylua: ignore
+        {
+          require("lazy.status").updates,
+          cond = require("lazy.status").has_updates,
+          color = function() return { fg = Snacks.util.color("Special") } end,
+        },
       },
       lualine_y = { "progress" },
       lualine_z = { "location" },
     },
     extensions = { "nvim-dap-ui", "trouble", "mason" },
   },
-  keys = function()
-    local keys = {}
-
-    for i = 1, 8 do
-      table.insert(keys, {
-        "<leader>b" .. i,
-        function()
-          vim.cmd("LualineBuffersJump! " .. i)
-        end,
-        desc = "Buffer to " .. i,
-      })
-    end
-    return keys
-  end,
 }
