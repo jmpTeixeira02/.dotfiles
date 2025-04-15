@@ -6,11 +6,11 @@ vim.g.last_buffer = 0
 local wk = require("which-key")
 wk.add({
   { "<leader><CR>", vim.cmd.so, desc = "Reload Vim Config" },
-  { "<leader>y", '"+y"', desc = "Yank to clipboard", mode = { "v", "n" } },
-  { "<leader>Y", '"+Y"', desc = "Yank to end to clipboard", mode = { "v", "n" } },
 })
 
--- Recenter buffer
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
