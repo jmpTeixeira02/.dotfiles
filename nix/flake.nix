@@ -31,7 +31,7 @@
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
           modules = [
             ./share.nix
-            ./module/mac.nix
+            ./module/work.nix
             ./module/tmux.nix
           ];
         };
