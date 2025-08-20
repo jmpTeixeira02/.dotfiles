@@ -13,6 +13,10 @@ export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
+# Colima Docker Engine Fix Testcontainers
+export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+export DOCKER_HOST="unix://${HOME}/.config/colima/docker.sock"
+
 # Alias
 alias vim="nvim"
 alias vi="nvim"

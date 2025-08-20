@@ -20,9 +20,9 @@
     ripgrep
     btop
     lazygit
-    lazydocker
     
     gh
+    gnupg
 
     unzip
     xclip

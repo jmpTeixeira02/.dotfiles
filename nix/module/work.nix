@@ -22,6 +22,7 @@
     colima
 
     mdbook
+    k9s
 
     # Apple Specific
     colima
