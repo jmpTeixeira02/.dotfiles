@@ -70,4 +70,3 @@ antigen apply
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 source <(fzf --zsh)
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

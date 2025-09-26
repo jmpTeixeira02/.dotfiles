@@ -49,8 +49,8 @@ in
       better-mouse-mode
       tmux-fzf
       sensible
-      continuum
       resurrect
+      continuum
     ];
 
     extraConfig = ''

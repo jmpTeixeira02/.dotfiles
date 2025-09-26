@@ -6,12 +6,11 @@
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
-    clang
     gnumake
 
     go
-    nodejs_20
     typescript
+    nodejs_24
     k3d
     kubectl
     kubernetes-helm
@@ -26,7 +25,6 @@
 
     # Apple Specific
     colima
-    apple-sdk
   ];
 
   programs.home-manager.enable = true;

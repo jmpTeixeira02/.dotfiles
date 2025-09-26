@@ -6,8 +6,6 @@
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
-    clang-tools
-    clang
     gnumake
     bison
 
