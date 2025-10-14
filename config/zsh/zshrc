@@ -129,7 +129,6 @@ for keymap in emacs vicmd viins; do
     bindkey -M $keymap '\eK' sesh-kill-session
 done
 
-
 source ~/.nix-profile/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle eza
