@@ -18,6 +18,7 @@
     ripgrep
     btop
     lazygit
+    sesh
     
     gh
     kubectl
