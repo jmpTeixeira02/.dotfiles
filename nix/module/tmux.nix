@@ -55,6 +55,7 @@ in
 
     extraConfig = ''
       set-option -g status-position top
+      set -g detatch-on-destroy off
 
       bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded tmux config"
 
@@ -72,4 +73,8 @@ in
   };
 
   programs.home-manager.enable = true;
+
+  home.packages = with pkgs; [
+    sesh
+  ];
 }
