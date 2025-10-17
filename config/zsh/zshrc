@@ -13,8 +13,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # MacOS C Lib errors
-export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
-export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
+if [[ "$(uname)" == "Darwin" ]]; then
+    export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
+    export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
+fi
 
 # Colima Docker Engine Fix Testcontainers
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock

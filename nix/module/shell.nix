@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+
+
   home.packages = with pkgs; [
     zsh
     antigen
@@ -15,4 +17,5 @@
   };
 
   programs.home-manager.enable = true;
+
 }

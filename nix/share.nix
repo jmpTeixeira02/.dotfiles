@@ -20,6 +20,7 @@
     lazygit
     
     gh
+    kubectl
     gnupg
 
     unzip

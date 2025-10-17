@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  home.username = builtins.getEnv "FLAKE_USER";
-  home.homeDirectory = builtins.getEnv "FLAKE_HOME";
-  home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
     gnumake
