@@ -67,7 +67,7 @@ in
       set -g @resurrect-capture-pane-contents 'on' # allow tmux-ressurect to capture pane contents
       set -g @continuum-restore 'on' # enable tmux-continuum functionality
 
-      set -g default-command "$SHELL"
+      set -g default-command "zsh"
     '';
   };
 
