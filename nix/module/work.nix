@@ -19,6 +19,7 @@
 
     mdbook
     k9s
+    buf
 
     # Apple Specific
     colima
