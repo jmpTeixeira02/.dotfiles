@@ -1,3 +1,5 @@
+ZSH_CONFIG_DIR="$HOME/.config/zsh"
+
 ZSH_TMUX_DEFAULT_SESSION_NAME="master"
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
@@ -22,12 +24,6 @@ fi
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
 export DOCKER_HOST="unix://${HOME}/.config/colima/docker.sock"
 
-# Alias
-alias vim="nvim"
-alias vi="nvim"
-alias src="source ~/.zshrc"
-alias tree="eza --icons --tree"
-alias cat='bat --paging=never'
 
 # # Lazygit switch dir on exit
 lg()
