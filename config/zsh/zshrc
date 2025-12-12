@@ -20,9 +20,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
     export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
 fi
 
-# Colima Docker Engine Fix Testcontainers
-export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
-export DOCKER_HOST="unix://${HOME}/.config/colima/docker.sock"
 
 
 # # Lazygit switch dir on exit
@@ -37,6 +34,10 @@ lg()
             rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
     fi
 }
+
+for f in ~/.config/zsh/*.zsh; do
+  source "$f"
+done
 
 ## FZF
 export FZF_DEFAULT_OPTS="

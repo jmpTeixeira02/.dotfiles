@@ -20,6 +20,7 @@
             ./share.nix
             ./module/tmux.nix
             ./module/linux.nix
+            { colima = true; }
           ];
         };
         server = home-manager.lib.homeManagerConfiguration {
