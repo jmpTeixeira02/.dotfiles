@@ -7,6 +7,11 @@
         default = false;
         description = "Use colima test container fix";
     };
+    macOS = lib.mkOption {
+        type = lib.types.bool;
+        default = pkgs.stdenv.isDarwin;
+        description = "Include macos specific fixes";
+    };
   };
 
   config = {
@@ -27,6 +32,9 @@
             config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zsh/plugins.zsh";
         ".config/zsh/fzf.zsh".source =
             config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zsh/fzf.zsh";
+        ".config/zsh/macos.zsh" = lib.mkIf config.macOS {
+            source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zsh/macos.zsh";
+        };
         ".config/starship".source =
             config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/starship";
         ".config/zsh/colima.zsh" = lib.mkIf config.colima {
