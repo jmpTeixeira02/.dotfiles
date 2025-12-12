@@ -14,31 +14,9 @@ export PATH=$PATH:$(go env GOPATH)/bin/
 export XDG_CONFIG_HOME="$HOME/.config" # dotfiles on ~/.config
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/starship.toml
 
-# MacOS C Lib errors
-if [[ "$(uname)" == "Darwin" ]]; then
-    export PATH=/Library/Developer/CommandLineTools/usr/bin:$PATH
-    export SDKROOT=$(xcrun --sdk macosx --show-sdk-path)
-fi
-
-
-
-# # Lazygit switch dir on exit
-lg()
-{
-    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
-
-    lazygit "$@"
-
-    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
-            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
-    fi
-}
-
 for f in ~/.config/zsh/*.zsh; do
   source "$f"
 done
-
 
 
 eval "$(starship init zsh)"
