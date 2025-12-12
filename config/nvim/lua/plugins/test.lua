@@ -1,5 +1,9 @@
 return {
   {
+    "fredrikaverpil/neotest-golang",
+    dev = "jmpTeixeira02/neotest-golang",
+  },
+  {
     "andythigpen/nvim-coverage",
     version = "*",
     config = function()
