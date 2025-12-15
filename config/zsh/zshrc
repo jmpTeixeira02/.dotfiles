@@ -8,9 +8,6 @@ setopt interactivecomments
 
 # Variables
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$(go env GOPATH)/bin/
 export XDG_CONFIG_HOME="$HOME/.config" # dotfiles on ~/.config
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/starship.toml
 

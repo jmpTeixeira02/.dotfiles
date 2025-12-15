@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 
@@ -73,8 +71,4 @@ in
   };
 
   programs.home-manager.enable = true;
-
-  home.packages = with pkgs; [
-    sesh
-  ];
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -15,14 +15,10 @@
 
     docker
     docker-compose
-    colima
 
     mdbook
     k9s
     buf
-
-    # Apple Specific
-    colima
   ];
 
   programs.home-manager.enable = true;

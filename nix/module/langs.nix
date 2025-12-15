@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -7,8 +7,6 @@
     typescript
     python314
     python312Packages.pip
-    elixir
-    cargo
   ];
 
   programs.home-manager.enable = true;

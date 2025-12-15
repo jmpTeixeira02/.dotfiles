@@ -17,22 +17,20 @@
         joao = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;    
           modules = [
-            ./share.nix
+            ./core.nix
             ./module/tmux.nix
-            ./module/linux.nix
           ];
         };
         server = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;    
           modules = [
-            ./share.nix
-            ./module/linux.nix
+            ./core.nix
           ];
         };
         work = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
           modules = [
-            ./share.nix
+            ./core.nix
             ./module/work.nix
             ./module/tmux.nix
             { colima = true; }

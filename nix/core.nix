@@ -5,7 +5,12 @@
     colima = lib.mkOption {
         type = lib.types.bool;
         default = false;
-        description = "Use colima test container fix";
+        description = "Include colima specific fixes";
+    };
+    terminal = lib.mkOption {
+        type = lib.types.str;
+        default = "ghostty";
+        description = "Terminal emulator";
     };
     macOS = lib.mkOption {
         type = lib.types.bool;
@@ -15,13 +20,53 @@
   };
 
   config = {
-    home.packages = with pkgs; [
+    home = {
+      username = builtins.getEnv "FLAKE_USER";
+      homeDirectory = builtins.getEnv "FLAKE_HOME";
+      stateVersion = "24.11";
+      packages = with pkgs; [
+        # Utils
+        gnumake
+        bison
+        # Core tools
         zsh
         antigen
         starship
-    ];
-
-    home.file = {
+        zoxide
+        eza
+        bat
+        fzf
+        tlrc
+        fd
+        ripgrep
+        btop
+        lazygit
+        sesh
+        unzip
+        xclip
+        # IDE
+        neovim
+        tree-sitter
+        # Docker
+        docker
+        docker-compose
+        kubernetes-helm
+        lazydocker
+        kubectl
+        k3d
+        # Git
+        gh
+        gnupg # Sign commits
+      ]
+      ++ lib.optionals config.colima [
+        colima
+      ]
+      ++ lib.optionals (!config.macOS) [
+        clang
+      ];
+      file = {
+        ".config/nvim".source =
+          config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/nvim";
         ".zshrc".source =
             config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zsh/zshrc";
         ".config/zsh/aliases.zsh".source =
@@ -40,6 +85,10 @@
         ".config/zsh/colima.zsh" = lib.mkIf config.colima {
             source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/zsh/colima.zsh";
         };
+        ".config/ghostty" = lib.mkIf (config.terminal == "ghostty") {
+            source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/config/ghostty";
+        };
+      };
     };
 
     programs.home-manager.enable = true;
