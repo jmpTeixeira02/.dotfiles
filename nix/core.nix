@@ -28,6 +28,7 @@
         # Utils
         gnumake
         bison
+        nh
         # Core tools
         zsh
         antigen
@@ -54,6 +55,8 @@
         lazydocker
         kubectl
         k3d
+        k9s
+        opentofu
         # Git
         gh
         gnupg # Sign commits
