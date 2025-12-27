@@ -3,10 +3,9 @@
 {
   home.packages = with pkgs; [
     go
-    nodejs_24
     typescript
-    python314
-    python312Packages.pip
+    nodejs
+    python3
   ];
 
   programs.home-manager.enable = true;

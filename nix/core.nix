@@ -30,7 +30,6 @@
         bison
         nh
         # Core tools
-        zsh
         antigen
         starship
         zoxide
@@ -49,7 +48,8 @@
         neovim
         tree-sitter
         go
-        nodejs_24
+        nodejs
+        python3
         # Docker
         docker
         docker-compose
@@ -68,6 +68,7 @@
       ]
       ++ lib.optionals (!config.macOS) [
         gcc
+        zsh
       ];
       file = {
         ".config/nvim".source =
