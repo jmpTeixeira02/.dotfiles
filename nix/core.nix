@@ -48,6 +48,8 @@
         # IDE
         neovim
         tree-sitter
+        go
+        nodejs_24
         # Docker
         docker
         docker-compose
@@ -65,7 +67,7 @@
         colima
       ]
       ++ lib.optionals (!config.macOS) [
-        clang
+        gcc
       ];
       file = {
         ".config/nvim".source =
