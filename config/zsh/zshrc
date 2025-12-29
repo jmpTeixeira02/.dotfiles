@@ -11,7 +11,12 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export XDG_CONFIG_HOME="$HOME/.config" # dotfiles on ~/.config
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/starship.toml
 
+
+# Source plugins first as it might override other commands
+[ -f ~/.config/zsh/plugins.zsh ] && source ~/.config/zsh/plugins.zsh
+
 for f in ~/.config/zsh/*.zsh; do
+  [[ "$f" == *"plugins.zsh" ]] && continue
   source "$f"
 done
 
