@@ -18,13 +18,13 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;    
           modules = [
             ./core.nix
-            ./module/tmux.nix
           ];
         };
         server = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;    
           modules = [
             ./core.nix
+            { tmux = false; }
           ];
         };
         work = home-manager.lib.homeManagerConfiguration {
@@ -32,7 +32,6 @@
           modules = [
             ./core.nix
             ./module/work.nix
-            ./module/tmux.nix
             { colima = true; }
           ];
         };

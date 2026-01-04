@@ -37,22 +37,13 @@ function sesh-connect-session() {
     _session_runner_ "Select a TMUX Session" _sesh_sessions_ _sesh_connect_
 }
 zle     -N             sesh-connect-session
-for keymap in emacs vicmd viins; do 
-    bindkey -M $keymap '\es' sesh-connect-session
-done
 
 function sesh-new-session() {
     _session_runner_ "Start a TMUX Session" _sesh_all_ _sesh_connect_
 }
 zle     -N             sesh-new-session
-for keymap in emacs vicmd viins; do 
-    bindkey -M $keymap '\eS' sesh-new-session
-done
 
 function sesh-kill-session() {
     _session_runner_ "Kill a TMUX Session" _sesh_sessions_ _sesh_kill_
 }
 zle     -N             sesh-kill-session
-for keymap in emacs vicmd viins; do 
-    bindkey -M $keymap '\eK' sesh-kill-session
-done
