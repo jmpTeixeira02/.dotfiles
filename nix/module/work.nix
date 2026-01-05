@@ -7,11 +7,12 @@
 
     go
     typescript
-    nodejs_24
+    nodejs
     k3d
     kubectl
     kubernetes-helm
     postgresql_17
+    graphviz
 
     docker
     docker-compose
