@@ -80,6 +80,7 @@ in
         k3d
         k9s
         opentofu
+        ansible
         # Git
         gh
         gnupg # Sign commits
