@@ -4,6 +4,7 @@ ZSH_TMUX_DEFAULT_SESSION_NAME="master"
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
 setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 setopt interactivecomments
 
 # Variables
