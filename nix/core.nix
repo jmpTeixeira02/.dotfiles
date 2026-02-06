@@ -67,10 +67,10 @@ in
         xclip
         # IDE
         neovim
-        tree-sitter
         go
         nodejs
         python3
+        cargo
         # Docker
         docker
         docker-compose

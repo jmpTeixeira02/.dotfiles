@@ -4,6 +4,7 @@ alias vi="nvim"
 alias src="source ~/.zshrc"
 alias tree="eza --icons --tree"
 alias cat='bat --paging=never'
+alias clean_nvim='rm -rf ~/.local/share/nvim'
 
 # Lazygit switch dir on exit
 lg()

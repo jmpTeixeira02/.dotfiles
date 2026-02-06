@@ -8,6 +8,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt interactivecomments
 
 # Variables
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH" # Export mason installed bins
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH=$PATH:$(go env GOPATH)/bin/
 export XDG_CONFIG_HOME="$HOME/.config" # dotfiles on ~/.config
