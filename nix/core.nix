@@ -65,6 +65,9 @@ in
         sesh
         unzip
         xclip
+        mermaid-cli
+        tectonic
+        imagemagick_light
         # IDE
         neovim
         go
